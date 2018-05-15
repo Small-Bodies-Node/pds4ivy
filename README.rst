@@ -3,6 +3,8 @@ Ginga-based viewer for NASA Planetary Data System v4 images.
 
 -Prototype code.  Contact us with questions, comments, ideas.
 
+Some feature ideas may be found in the `project wiki <https://github.com/Small-Bodies-Node/pds4ivy/wiki>`_.
+
 Requirements
 ------------
 * numpy
