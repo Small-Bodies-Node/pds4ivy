@@ -13,7 +13,8 @@ conf.read(['setup.cfg'])
 metadata = dict(conf.items('metadata'))
 
 PACKAGENAME = metadata.get('package_name', 'pds4ivy')
-DESCRIPTION = metadata.get('description', 'Ginga-based viewer for NASA Planetary Data System v4 images.')
+DESCRIPTION = metadata.get(
+    'description', 'Ginga-based viewer for NASA Planetary Data System v4 images.')
 AUTHOR = metadata.get('author', 'Michael S. P. Kelley')
 AUTHOR_EMAIL = metadata.get('author_email', '')
 LICENSE = metadata.get('license', 'unknown')
@@ -23,12 +24,13 @@ __minimum_python_version__ = metadata.get("minimum_python_version", "3.5")
 # Enforce Python version check - this is the same check as in __init__.py but
 # this one has to happen before importing ah_bootstrap.
 if sys.version_info < tuple((int(val) for val in __minimum_python_version__.split('.'))):
-    sys.stderr.write("ERROR: pds4ivy requires Python {} or later\n".format(__minimum_python_version__))
+    sys.stderr.write("ERROR: pds4ivy requires Python {} or later\n".format(
+        __minimum_python_version__))
     sys.exit(1)
 
 # Import ah_bootstrap after the python version validation
 
-import ah_bootstrap
+#import ah_bootstrap
 from setuptools import setup
 
 import builtins
@@ -129,7 +131,8 @@ setup(name=PACKAGENAME,
       version=VERSION,
       description=DESCRIPTION,
       scripts=scripts,
-      install_requires=[s.strip() for s in metadata.get('install_requires', 'astropy').split(',')],
+      install_requires=[s.strip() for s in metadata.get(
+          'install_requires', 'astropy').split(',')],
       author=AUTHOR,
       author_email=AUTHOR_EMAIL,
       license=LICENSE,
@@ -141,4 +144,4 @@ setup(name=PACKAGENAME,
       entry_points=entry_points,
       python_requires='>={}'.format(__minimum_python_version__),
       **package_info
-)
+      )
