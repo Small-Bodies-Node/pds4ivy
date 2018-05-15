@@ -14,7 +14,7 @@ Requirements
 Limitations
 -----------
 
-Ivy assumes the image can be read into memory and displayed on your screen all at ones.  Very large images, either by volume, size, or both, are untested.
+Ivy assumes the image can be read into memory and displayed on your screen all at once.  Very large images, either by volume, size, or both, are untested.
 
 
 License
