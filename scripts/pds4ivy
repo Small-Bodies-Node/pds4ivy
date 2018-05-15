@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+import sys
+from ginga.misc import log
+from ginga.qtw.QtHelp import QtGui
+
+from pds4ivy.PDS4ImageViewer import PDS4ImageViewer
+
+def main(options, args):
+    app = QtGui.QApplication(sys.argv)
+
+    # ginga needs a logger.
+    # If you don't want to log anything you can create a null logger by
+    # using null=True in this call instead of log_stderr=True
+    logger = log.get_logger("pds4ivy", log_stderr=True)
+
+    w = PDS4ImageViewer(logger)
+    w.resize(524, 540)
+    w.show()
+    app.setActiveWindow(w)
+    w.raise_()
+    w.activateWindow()
+
+    if len(args) > 0:
+        w.load_file(args[0])
+
+    app.exec_()
+
+
+if __name__ == '__main__':
+    main(None, sys.argv[1:])
