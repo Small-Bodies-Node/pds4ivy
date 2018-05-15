@@ -3,6 +3,12 @@ Ginga-based viewer for NASA Planetary Data System v4 images.
 
 -Prototype code.  Contact us with questions, comments, ideas.
 
+Requirements
+------------
+* numpy
+* ginga with Qt backend
+* pds4_tools
+
 
 License
 -------
