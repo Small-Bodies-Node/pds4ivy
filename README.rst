@@ -1,7 +1,8 @@
-Ginga-based viewer for NASA Planetary Data System v4 images
------------------------------------------------------------
+Ginga-based viewer for NASA Planetary Data System v4 images.
+------------------------------------------------------------
 
-Prototype code.  Contact us with questions or comments.
+-Prototype code.  Contact us with questions, comments, ideas.
+
 
 License
 -------
