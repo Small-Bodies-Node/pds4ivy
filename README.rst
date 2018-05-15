@@ -11,6 +11,11 @@ Requirements
 * ginga with Qt backend
 * pds4_tools
 
+Limitations
+-----------
+
+Ivy assumes the image can be read into memory and displayed on your screen all at ones.  Very large images, either by volume, size, or both, are untested.
+
 
 License
 -------
